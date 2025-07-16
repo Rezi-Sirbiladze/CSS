@@ -1,64 +1,59 @@
-✦ CONCEPTOS BÁSICOS DE CSS
+✦ CSS: CONCEPTOS BÁSICOS
 
-🧾 DEFINICIÓN
-CSS (Cascading Style Sheets) es un lenguaje utilizado para describir la presentación de documentos HTML. Introducido en 1996, su primera implementación fue en Internet Explorer 3.
+🚫 NOTAS CLAVE
+- Las reglas van entre {} y terminan en ;.
+- Comentarios: /* Hola mundo */
+- Mejor separar CSS del HTML (archivo externo).
+- CSS define la presentación de HTML.
+- "Cascada": combinación de reglas según orden, especificidad y !important.
+- La regla más específica y reciente prevalece.
+- Evita usar etiquetas e IDs como selectores principales.
+- Selectores combinados (.a .b) pueden aplicar estilos duplicados.
 
-🌊 CASCADA Y ESPECIFICIDAD
-- "Cascada" se refiere a cómo se combinan múltiples reglas CSS en un mismo elemento.
-- Las reglas se aplican en función del orden, la especificidad y la importancia (uso de !important).
-- El estilo más específico y reciente tiene prioridad.
+🔍 SELECTORES
+- h1        → etiqueta
+- .clase    → clase
+- #id       → ID
+- *         → todos
+- [attr]    → atributo
 
-🔍 SELECTORES BÁSICOS
-- h1       → Selector por etiqueta.
-- .clase   → Selector por clase.
-- #id      → Selector por ID.
-- *        → Selector universal (todos los elementos).
-- [attr]   → Selector por atributo.
+🎨 PROPIEDADES FRECUENTES
+- color               → color del texto  
+- background-color    → color de fondo  
+- font-size           → tamaño de la fuente  
+- text-align          → alineación del texto  
+- border              → borde alrededor del elemento  
+- outline             → borde exterior (sin afectar tamaño)  
+- margin              → espacio exterior (fuera del elemento)  
+- padding             → espacio interior (dentro del elemento)  
+- background          → propiedad abreviada para color, imagen, etc.
 
-🎨 PROPIEDADES COMUNES
-- color               → Color del texto.
-- background-color    → Color de fondo.
-- font-size           → Tamaño de fuente.
-- text-align          → Alineación del texto.
-- border              → Borde del elemento.
-- margin / padding    → Espaciado externo / interno.
+🔁 UNIDADES
+- px     → fijo
+- em     → relativo al padre
+- rem    → relativo al html
+- %      → relativo al contenedor
 
-🌈 COLORES EN CSS
-- Por nombre: white, black, crimson, etc.
-- RGB: rgb(255, 0, 0) / rgba(255, 0, 0, 0.5).
-- Hexadecimal: #ffffff, #000000.
-- HSL: hsl(0, 100%, 50%) / hsla(0, 100%, 50%, 0.3).
-- currentColor: Hereda el color actual del texto para otras propiedades.
+🎯 PSEUDOCLASES
+:hover          → al pasar el ratón  
+:active         → al hacer clic  
+:focus          → al enfocar (ej. input activo)  
+:first-child    → primer hijo  
+:last-child     → último hijo  
 
-🧱 ESTRUCTURA DE UNA DECLARACIÓN
-selector {
-  propiedad: valor;
-  propiedad: valor;
-}
+🧱 SELECTORES AVANZADOS
+- A > B  → hijo directo
+- A + B  → siguiente hermano
+- A ~ B  → hermanos posteriores
 
-🛠️ EJEMPLO
-h1 {
-  color: navy;
-  font-size: 2em;
-}
+🌈 COLORES
+- Nombres: red, white...
+- RGB / RGBA: rgb(255,0,0)
+- HEX: #ff0000
+- HSL / HSLA: hsl(0,100%,50%)
+- currentColor: hereda el color actual
 
-🚫 NOTAS IMPORTANTES
-- Las propiedades deben ir dentro de llaves {} y terminar en punto y coma (;).
-- Los comentarios en CSS se escriben así: /* Esto es un comentario */
-- Se recomienda separar el CSS del HTML para mantener el código limpio (CSS externo).
-
-📁 FORMAS DE INCLUIR CSS
-- En línea: dentro del atributo style → <p style="color:red;">
-- Interno: dentro de <style> en el <head> del documento HTML.
-- Externo: en un archivo .css vinculado con <link>.
-
-🔁 UNIDADES DE MEDIDA FRECUENTES
-- px     → píxeles
-- em     → relativo al tamaño de fuente del elemento padre
-- rem    → relativo al tamaño de fuente raíz (html)
-- %      → porcentaje relativo al contenedor
-
-⚙️ HERRAMIENTAS Y TÉCNICAS
-- Normalize.css: para homogeneizar estilos entre navegadores.
-- Reset CSS: para eliminar todos los estilos por defecto.
-- Variables CSS: se definen con --nombre y se usan con var(--nombre).
+⚙️ TÉCNICAS
+- Normalize.css: unifica estilos entre navegadores
+- Reset.css: elimina estilos por defecto
+- Variables: --nombre / var(--nombre)
