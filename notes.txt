@@ -9,6 +9,9 @@
 - La regla más específica y reciente prevalece.
 - Evita usar etiquetas e IDs como selectores principales.
 - Selectores combinados (.a .b) pueden aplicar estilos duplicados.
+- Niveles de especificación: seguir una jerarquía (#id > .clase > etiqueta)  
+- Fallbacks: aplicar alternativas si una opción no está soportada o accesible  
+- Evitar estilos específicos en CSS, salvo si se aplican dinámicamente desde JavaScript
 
 🔍 SELECTORES
 - h1        → etiqueta
@@ -56,4 +59,4 @@
 ⚙️ TÉCNICAS
 - Normalize.css: unifica estilos entre navegadores
 - Reset.css: elimina estilos por defecto
-- Variables: --nombre / var(--nombre)
+- specificity.keegan.st: Chalcular la especificidad de selectores CSS (#id > .clase > etiqueta) (0, 0, 0)
