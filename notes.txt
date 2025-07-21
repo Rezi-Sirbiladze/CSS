@@ -12,6 +12,9 @@
 - Niveles de especificación: seguir una jerarquía (#id > .clase > etiqueta)  
 - Fallbacks: aplicar alternativas si una opción no está soportada o accesible  
 - Evitar estilos específicos en CSS, salvo si se aplican dinámicamente desde JavaScript
+- Dimensiones: Absolutas: px, cm, in (fijas) Relativas: %, em, rem, vh, vw (dependen del contexto)
+- 100vh puede causar scroll:  Algunos navegadores añaden 8px de margen al body por defecto.
+- Elementos en línea: No respetan width ni height. Su tamaño depende del contenido.
 
 🔍 SELECTORES
 - h1        → etiqueta
@@ -30,6 +33,10 @@
 - margin              → espacio exterior (fuera del elemento)  
 - padding             → espacio interior (dentro del elemento)  
 - background          → propiedad abreviada para color, imagen, etc.
+- width               → ancho del contenido del elemento (sin padding, border o margin)
+- height              → alto del contenido del elemento (sin padding, border o margin)
+- vh                  → x% de la altura visible del viewport
+- vw                  → x% del ancho visible del viewport
 
 🔁 UNIDADES
 - px     → fijo
