@@ -15,6 +15,8 @@
 - Dimensiones: Absolutas: px, cm, in (fijas) Relativas: %, em, rem, vh, vw (dependen del contexto)
 - 100vh puede causar scroll:  Algunos navegadores añaden 8px de margen al body por defecto.
 - Elementos en línea: No respetan width ni height. Su tamaño depende del contenido.
+- box-sizing: puede ser 'content-box' (por defecto) o 'border-box' (incluye padding y borde en el tamaño total)
+- overflow: usar 'auto' permite mostrar scroll solo cuando es necesario, ocultándolo si no se requiere
 
 🔍 SELECTORES
 - h1        → etiqueta
@@ -35,8 +37,11 @@
 - background          → propiedad abreviada para color, imagen, etc.
 - width               → ancho del contenido del elemento (sin padding, border o margin)
 - height              → alto del contenido del elemento (sin padding, border o margin)
-- vh                  → x% de la altura visible del viewport
-- vw                  → x% del ancho visible del viewport
+- vh                  → 1% de la altura visible del viewport
+- vw                  → 1% del ancho visible del viewport
+- box-sizing          → define si padding y border se incluyen en width y height
+- overflow            → controla el contenido que se sale del contenedor
+- text-overflow       → cómo se muestra el texto que desborda (ej: '...') 
 
 🔁 UNIDADES
 - px     → fijo
