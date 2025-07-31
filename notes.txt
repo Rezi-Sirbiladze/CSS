@@ -17,6 +17,8 @@
 - Elementos en línea: No respetan width ni height. Su tamaño depende del contenido.
 - box-sizing: puede ser 'content-box' (por defecto) o 'border-box' (incluye padding y borde en el tamaño total)
 - overflow: usar 'auto' permite mostrar scroll solo cuando es necesario, ocultándolo si no se requiere
+- position: static, absolute, relative, fixed, sticky
+- contexto de apilamento
 
 🔍 SELECTORES
 - h1        → etiqueta
@@ -42,6 +44,15 @@
 - box-sizing          → define si padding y border se incluyen en width y height
 - overflow            → controla el contenido que se sale del contenedor
 - text-overflow       → cómo se muestra el texto que desborda (ej: '...') 
+- position            → Determina el modo de posicionamiento del elemento (static, relative, absolute, fixed, - sticky).
+    - static    → Posición por defecto. El elemento se ubica según el flujo normal de la página y no responde a top/left/right/bottom.
+    - relative  → Mantiene su lugar en el flujo, pero puedes moverlo ligeramente con top, left, etc., sin afectar a los demás.
+    - absolute  → Se saca del flujo y se posiciona respecto al primer ancestro posicionado (que no sea static).
+    - fixed     → Se pega a la ventana del navegador, sin desplazarse al hacer scroll.
+    - sticky → Combinación de relative y fixed: se comporta normal hasta que llega a un punto y luego se queda pegado hasta salir del contenedor.
+- z-index             → Controla la profundidad de apilamiento de un elemento.
+- flex                → Es un atajo que combina flex-grow, flex-shrink y flex-basis.
+- flex-flow           → Es un atajo que combina flex-direction y flex-wrap.
 
 🔁 UNIDADES
 - px     → fijo
@@ -72,3 +83,4 @@
 - Normalize.css: unifica estilos entre navegadores
 - Reset.css: elimina estilos por defecto
 - specificity.keegan.st: Chalcular la especificidad de selectores CSS (#id > .clase > etiqueta) (0, 0, 0)
+- lyqht.github.io/scrollbar-playground: Estilos de scrollbar
